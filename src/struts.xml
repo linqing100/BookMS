@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+    <package name="mytest_manager" extends="struts-default" namespace="/">
+        <action name="ManagerPage" class="action.ManagerAction" method="page">
+		    <result name="manager">managerset.jsp</result>
+		</action>
+		<action name="BookPage" class="action.BookAction" method="page">
+		    <result name="bookinfo">bookset.jsp</result>
+		</action>
+		<action name="ReaderPage" class="action.ReaderAction" method="page">
+		    <result name="reader">readerset.jsp</result>
+		</action>
+		<action name="BorrowPage" class="action.BorrowBackAction" method="page">
+		    <result name="renewok">renewok.jsp</result>
+		</action>
+		<action name="BackPage" class="action.BorrowBackAction" method="pageback">
+		    <result name="bookbackok">bookbackok.jsp</result>
+		</action>
+		<action name="deleteManager" class="action.ManagerAction" method="deleteManager">
+			<result name="success" type="redirectAction">
+			   <param name="actionName">ManagerPage</param>
+			   <param name="msg">${msg}</param>
+			</result>
+		</action>
+		<action name="deleteBook" class="action.BookAction" method="deleteBook">
+			<result name="success" type="redirectAction">
+			   <param name="actionName">BookPage</param>
+			   <param name="msg">${msg}</param>
+			</result>
+		</action>
+		<action name="deleteReader" class="action.ReaderAction" method="deleteReader">
+			<result name="success" type="redirectAction">
+			   <param name="actionName">ReaderPage</param>
+			   <param name="msg">${msg}</param>
+			</result>
+		</action>
+		<action name="deleteBorrow" class="action.BorrowBackAction" method="deleteBorrow">
+			<result name="success">bookback.jsp</result>
+		</action>
+		<action name="editManager" class="action.ManagerAction" method="editManager">
+			<result name="success">edit.jsp</result>
+		</action>
+		<action name="editBook" class="action.BookAction" method="editBook">
+			<result name="success">editBook.jsp</result>
+		</action>
+		<action name="editReader" class="action.ReaderAction" method="editReader">
+			<result name="success">editReader.jsp</result>
+		</action>
+		<action name="updateManager" class="action.ManagerAction" method="updateManager">
+			<result name="success" type="redirectAction">
+			   <param name="actionName">ManagerPage</param>
+			   <param name="msg">${msg}</param>
+			</result>
+		</action>
+		<action name="updateBook" class="action.BookAction" method="updateBook">
+			<result name="success" type="redirectAction">
+			   <param name="actionName">BookPage</param>
+			   <param name="msg">${msg}</param>
+			</result>
+		</action>
+		<action name="updateReader" class="action.ReaderAction" method="updateReader">
+			<result name="success" type="redirectAction">
+			   <param name="actionName">ReaderPage</param>
+			   <param name="msg">${msg}</param>
+			</result>
+		</action>
+		<action name="updateBorrow" class="action.BorrowBackAction" method="updateBorrow">
+			<result name="success">renew.jsp</result>
+		</action>
+		<action name="lookManager" class="action.ManagerAction" method="lookManager">
+			<result name="success">look.jsp</result>
+		</action>
+		<action name="lookBook" class="action.BookAction" method="lookBook">
+			<result name="success">lookBook.jsp</result>
+		</action>
+		
+		<action name="lookReader" class="action.ReaderAction" method="lookReader">
+			<result name="success">borrow.jsp</result>
+			<result name="fail">error.jsp</result>
+		</action>
+		<action name="deleteServal" class="action.ManagerAction" method="deleteServal">
+			<result name="success" type="redirectAction">
+			  <param name="actionName">ManagerPage</param>
+			  <param name="msg">${msg}</param>
+			</result>
+		</action>
+		<action name="searchManager" class="action.ManagerAction" method="searchManager">
+			<result name="success">look.jsp</result>
+		</action>
+		<action name="searchBook" class="action.BookAction" method="searchBook">
+			<result name="success">lookBook.jsp</result>
+		</action>
+		<action name="searchReader" class="action.ReaderAction" method="searchReader">
+			<result name="success">lookReader.jsp</result>
+		</action>
+		<action name="searchBorrowByBook" class="action.BorrowBackAction" method="searchBorrowByBook">
+			<result name="success">borrow.jsp</result>
+			<result name="fail">error.jsp</result>
+		</action>
+		
+		<!--  x<action name="searchBorrowByReader" class="action.BorrowBackAction" method="searchBorrowByReader">
+			<result name="success" type="redirectAction">
+			   <param name="actionName">BorrowPage</param>
+			   <param name="msg">${msg}</param>
+			</result>
+			
+		</action>
+		-->
+		<action name="insertManager" class="action.ManagerAction" method="insertManager">
+			<result name="success" type="redirectAction">
+			   <param name="actionName">ManagerPage</param>
+			   <param name="msg">${msg}</param>
+			</result>
+		</action>
+		<action name="insertBook" class="action.BookAction" method="insertBook">
+			<result name="success" type="redirectAction">
+			   <param name="actionName">BookPage</param>
+			   <param name="msg">${msg}</param>
+			</result>
+		</action>
+		<action name="insertReader" class="action.ReaderAction" method="insertReader">
+			<result name="success" type="redirectAction">
+			   <param name="actionName">ReaderPage</param>
+			   <param name="msg">${msg}</param>
+			</result>
+		</action>
+		<action name="checkManager" class="action.ManagerAction" method="checkManager">
+			
+			<result name="success">welcomelogin.jsp</result>
+			<result name="fail">login.jsp</result>
+			</action>
+        </package>
+</struts>

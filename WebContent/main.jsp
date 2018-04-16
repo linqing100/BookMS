@@ -1,0 +1,136 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>main</title>
+</head>
+<body>
+   <h3>图书借阅排行榜</h3>
+   <table width="1000" height="300" border="0" align="center" cellpadding="0" cellspacing="0">
+     <thead>
+					<tr>
+						<th>
+							排名
+						</th>
+						<th>
+							图书条形码
+						</th>
+						<th>
+							图书名称
+						</th>
+						<th>
+							图书类型
+						</th>
+						<th>
+							书架
+						</th>
+						<th>
+							出版社
+						</th>
+						<th>
+							作者
+						</th>
+						<th>
+							定价
+						</th>
+						<th>
+							借阅次数
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							1
+						</td>
+						<td>
+							TB - Monthly
+						</td>
+						<td>
+							01/04/2012
+						</td>
+						<td>
+							Default
+						</td>
+						<td>
+							Default
+						</td>
+						<td>
+							Default
+						</td>
+						<td>
+							Default
+						</td>
+						<td>
+							Default
+						</td>
+						<td>
+							Default
+						</td>
+					</tr>
+					
+					<tr class="error">
+						<td>
+							2
+						</td>
+						<td>
+							TB - Monthly
+						</td>
+						<td>
+							02/04/2012
+						</td>
+						<td>
+							Declined
+						</td>
+						<td>
+							Declined
+						</td>
+						<td>
+							Declined
+						</td>
+						<td>
+							Declined
+						</td>
+						<td>
+							Declined
+						</td>
+						<td>
+							Declined
+						</td>
+					</tr>
+					<tr class="warning">
+						<td>
+							3
+						</td>
+						<td>
+							TB - Monthly
+						</td>
+						<td>
+							03/04/2012
+						</td>
+						<td>
+							Pending
+						</td>
+						<td>
+							Pending
+						</td>
+						<td>
+							Pending
+						</td>
+						<td>
+							Pending
+						</td>
+						<td>
+							Pending
+						</td>
+						<td>
+							Pending
+						</td>
+					</tr>
+					
+				</tbody>
+   </table>
+</body>
+</html>
